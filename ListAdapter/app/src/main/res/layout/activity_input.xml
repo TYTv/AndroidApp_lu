@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.student.listadapter.InputActivity">
+
+    <EditText
+        android:id="@+id/EditTextInput"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:hint="input"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/ButtonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickAll"
+        android:text="Back"
+        android:layout_marginLeft="175dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="69dp"
+        android:layout_marginStart="175dp" />
+
+    <Button
+        android:id="@+id/ButtonOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickAll"
+        android:text="Ok"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="69dp"
+        app:layout_constraintLeft_toRightOf="@+id/ButtonBack"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp" />
+
+
+</android.support.constraint.ConstraintLayout>
