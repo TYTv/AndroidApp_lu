@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "460265060334",
+    "firebase_url": "https://database-bcc2f.firebaseio.com",
+    "project_id": "database-bcc2f",
+    "storage_bucket": "database-bcc2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460265060334:android:ef23250e23445edc",
+        "android_client_info": {
+          "package_name": "com.example.student.database"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460265060334-dn53kaf5jo43072costk41ppi9vl91gn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.student.database",
+            "certificate_hash": "b1a92593745d63f72918e6abd376e0806e643e43"
+          }
+        },
+        {
+          "client_id": "460265060334-qklrsmblf9kfbr38ksf8ab0uld0q0cnj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUw18oOg424pFvPFW5v1WKJLcaK_AZoB0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460265060334-qklrsmblf9kfbr38ksf8ab0uld0q0cnj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
