@@ -12,4 +12,23 @@ public class book {
     public String addr;
     public String email;
 
+    public book() {
+        ;
+    }
+
+    public book(String name, String tel, String addr, String email) {
+        this.name = name;
+        this.tel = tel;
+        this.addr = addr;
+        this.email = email;
+    }
+
+    public book(int id, String name, String tel, String addr, String email) {
+        this.id = id;
+        this.name = name;
+        this.tel = tel;
+        this.addr = addr;
+        this.email = email;
+    }
+
 }

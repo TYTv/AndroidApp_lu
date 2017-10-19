@@ -14,4 +14,8 @@ public interface bookDAO {
 
     public book[] getList();
 
+    public void delete(book b);
+
+    public void update(book b);
+
 }

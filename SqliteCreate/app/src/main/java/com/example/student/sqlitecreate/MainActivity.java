@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -16,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     ListView lv;
     ArrayAdapter<String> adp;
+    book[] b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
 
         bookDAO dao = new bookDAO_DBimp(this);
-        book[] b = dao.getList();
+        b = dao.getList();
 
         String str[] = new String[b.length];
         for (int i = 0; i < b.length; i++) {
@@ -40,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
         }
         adp = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, str);
         lv.setAdapter(adp);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                int id = b[position].id;
+                Intent it = new Intent(MainActivity.this, EditActivity.class);
+                it.putExtra("id", id);
+                startActivity(it);
+            }
+        });
 
     }
 

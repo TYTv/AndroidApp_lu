@@ -87,4 +87,23 @@ public class bookDAO_DBimp implements bookDAO {
 
     }
 
+    @Override
+    public void delete(book b) {
+        SQLiteDatabase db = helper.getWritableDatabase();
+        db.delete("telbook", "id=?", new String[] {String.valueOf(b.id)});
+        db.close();
+    }
+
+    @Override
+    public void update(book b) {
+        SQLiteDatabase db = helper.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("name", b.name);
+        cv.put("tel", b.tel);
+        cv.put("addr", b.addr);
+        cv.put("email", b.email);
+        db.update("telbook", cv, "id=?",new String[] {String.valueOf(b.id)});
+        db.close();
+    }
+
 }
