@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
 import android.widget.EditText;
 
@@ -35,7 +36,8 @@ public class EditActivity extends AppCompatActivity {
 
         Intent it = getIntent();
         int id = it.getIntExtra("id", 0);
-        bookDAO dao = new bookDAO_DBimp(this);
+//        bookDAO dao = new bookDAO_DBimp(this);
+        bookDAO dao = DAO_factory.getDAO(this, APL.daotyp);     //Run on memory
         b = dao.getOne(id);
         etId.setText(String.valueOf(b.id));
         etName.setText(b.name);
@@ -55,7 +57,8 @@ public class EditActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
-                bookDAO dao = new bookDAO_DBimp(EditActivity.this);
+//                bookDAO dao = new bookDAO_DBimp(EditActivity.this);
+                bookDAO dao = DAO_factory.getDAO(EditActivity.this, APL.daotyp);     //Run on memory
                 dao.delete(b);
 
                 finish();
@@ -76,7 +79,8 @@ public class EditActivity extends AppCompatActivity {
 
     public void onClickEdit(View view) {
 
-        bookDAO dao = new bookDAO_DBimp(EditActivity.this);
+//        bookDAO dao = new bookDAO_DBimp(EditActivity.this);
+        bookDAO dao = DAO_factory.getDAO(this, APL.daotyp);     //Run on memory
         b.name = etName.getText().toString();
         b.tel = etTel.getText().toString();
         b.addr = etAddr.getText().toString();
